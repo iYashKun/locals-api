@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/a", "dest": "/web-a/index.html" },
+    { "src": "/b", "dest": "/web-b/index.html" }
+  ]
+}
