@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web-B</title>
+</head>
+<body>
+  <h1>Web-B</h1>
+  <p id="output">Loading...</p>
+  <script>
+    fetch("/api/locals?web=locals-api.vercel.app")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("output").innerText = data.value;
+      });
+  </script>
+</body>
+</html>
