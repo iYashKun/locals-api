@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web-A</title>
+</head>
+<body>
+  <h1>Web-A</h1>
+  <script>
+    localStorage.setItem("cuslt", "bbc66763");
+    const value = localStorage.getItem("cuslt");
+
+    fetch("/api/save", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        web: "locals-api.vercel.app",
+        value: value
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Saved:", data);
+    });
+  </script>
+</body>
+</html>
